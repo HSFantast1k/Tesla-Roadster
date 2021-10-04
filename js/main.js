@@ -1,9 +1,23 @@
 $(function(){
-    $('.slider').slick({
+
+    $('.slider__inner').slick({
         arrows: false,
-        fade: true,
         dots: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    })
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 841,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 601,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    });
+
 });
