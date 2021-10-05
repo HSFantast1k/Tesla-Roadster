@@ -1,23 +1,21 @@
 $(function(){
-
-    $('.slider__inner').slick({
+    // Слайде
+    $('.slider').slick({
         arrows: false,
+        fade: true,
         dots: true,
-        slidesToShow: 3,
-        responsive: [
-            {
-                breakpoint: 841,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 601,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-        ]
+        autoplay: true,
+        autoplaySpeed: 3000,
+    })
+
+    // Включить меню
+    $('.header-btn').on('click', function(){
+        $('.menu').addClass('menu__active');
     });
 
+    // Выключить меню
+    $('.close-btn').on('click', function(){
+        $('.menu').removeClass('menu__active')
+    })
+    
 });
